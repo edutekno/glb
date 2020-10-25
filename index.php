@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+<!-- exp. https://edutekno.net/ar/?glb=https://edutekno.github.io/glb/object.glb  -->
 <html>
 <head>
 <?php
 error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
-$glb=””;$obj=””;$mtl=””;
-echo $glb=$_GET[‘glb’];
-$obj=$_GET[‘obj’];
-$mtl=$_GET[‘mtl’];
+$glb="";$obj="";$mtl="";
+echo $glb=$_GET['glb'];
+$obj=$_GET['obj'];
+$mtl=$_GET['mtl'];
 
 ?>
 
@@ -16,11 +17,11 @@ $mtl=$_GET[‘mtl’];
 <a-scene>
 <a-assets>
 <?php if (strlen($glb)> 4){?>
-<a-asset-item id=”glbmodel” response-type=”arraybuffer” src=”<?php echo $glb;?>”></a-asset-item>
+<a-asset-item id="glbmodel" response-type="arraybuffer" src="<?php echo $glb;?>"></a-asset-item>
 <?php }?>
 </a-assets>
 
-<a-entity gltf-model=”#glbmodel” position=”-1 1 -2″ scale=”0.5 0.5 0.5″ animation-mixer=”clip:mixamo.com; loop:2; timeScale: 2; crossFadeDuration: 1″></a-entity>
+<a-entity gltf-model="#glbmodel" position="-0 0 -2" scale="1 1 1" animation-mixer="clip:mixamo.com; loop:2; timeScale: 2; crossFadeDuration: 1"></a-entity>
 
 </a-scene>
     
